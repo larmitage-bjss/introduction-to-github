@@ -82,3 +82,8 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+        
+    - uses: actions/upload-artifact@v3
+      with:
+        name: javascript.sarif
+        path: /home/runner/work/introduction-to-github/results/javascript.sarif
